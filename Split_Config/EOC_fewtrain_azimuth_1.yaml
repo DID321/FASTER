@@ -1,0 +1,49 @@
+# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+
+# @time: 2026/02/09
+# @file: EOC_scene.yaml
+# @author: WD                     ___       __   ________
+# @contact: wdnudt@163.com        __ |     / /   ___  __ \
+#                                 __ | /| / /    __  / / /
+#                                 __ |/ |/ /     _  /_/ /
+#                                 ____/|__/      /_____/
+# Config yaml for EOC scene classification
+
+# task name
+task: SOC
+# Dataset root path
+data_path: J:/CSAR-ATR/Data
+# save split file path
+train_txt_path: J:/CSAR_ATR_Bench_20260223/Train_Test_TXT/SOC_fewtrain_azimuth_1.txt
+test_txt_path: J:/CSAR_ATR_Bench_20260223/Train_Test_TXT/SOC_fewtrain_azimuth_test.txt
+
+# sar train config
+sar_train:
+  angle: [ 0, 360 ]
+  pitch: [ 15, 25, 35, 45, 55 ]
+  band: ['KU']
+  scene: ['Grass', 'Road']
+  polar: ['HH', 'HV', 'VH', 'VV']
+
+# sar test config
+sar_test:
+    angle: [ 0, 360 ]
+    pitch: [ 10, 20, 30, 40, 50, 60 ]
+    band: ['KU']
+    scene: ['Grass', 'Road']
+    polar: ['HH', 'HV', 'VH', 'VV']
+
+# Classes
+names:
+    0: Bulldozer
+    1: Compact_Car
+    2: Compact_SUV
+    3: Large_Car
+    4: Large_MPV
+    5: Small_Bus
+    6: Medium_Bus
+    7: Off_Road_Vehicle
+    8: Pika
+    9: Semi_Trailer_Truck
+    10: Small_SUV
+    11: Sprinkler_Car
